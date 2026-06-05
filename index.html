@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darasimi Artworks - Young Entrepreneur Artist</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Darasimi Artworks</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#gallery" class="nav-link active">Gallery</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cart-icon" onclick="toggleCart(event)">
+                    <span id="cart-count" class="cart-badge">0</span> 🛒
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Featured Products -->
+    <section id="gallery" class="featured-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Artworks</h2>
+            </div>
+            <div id="featured-products" class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/8e44ad/FFFFFF?text=Abstract+Dreams" alt="Abstract Dreams" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Abstract Dreams</h3>
+                        <p class="product-price">Contact for Price</p>
+                        <button class="btn btn-secondary btn-small" onclick="addToCart('Abstract Dreams', 'Contact for Price')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/3498db/FFFFFF?text=Ocean+Whispers" alt="Ocean Whispers" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Ocean Whispers</h3>
+                        <p class="product-price">Contact for Price</p>
+                        <button class="btn btn-secondary btn-small" onclick="addToCart('Ocean Whispers', 'Contact for Price')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/2ecc71/FFFFFF?text=City+Lights" alt="City Lights" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">City Lights</h3>
+                        <p class="product-price">Contact for Price</p>
+                        <button class="btn btn-secondary btn-small" onclick="addToCart('City Lights', 'Contact for Price')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/f39c12/FFFFFF?text=Golden+Fields" alt="Golden Fields" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Golden Fields</h3>
+                        <p class="product-price">Contact for Price</p>
+                        <button class="btn btn-secondary btn-small" onclick="addToCart('Golden Fields', 'Contact for Price')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/e74c3c/FFFFFF?text=Sunset+Bliss" alt="Sunset Bliss" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Sunset Bliss</h3>
+                        <p class="product-price">Contact for Price</p>
+                        <button class="btn btn-secondary btn-small" onclick="addToCart('Sunset Bliss', 'Contact for Price')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/9b59b6/FFFFFF?text=Passionate+Red" alt="Passionate Red" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Passionate Red</h3>
+                        <p class="product-price">Contact for Price</p>
+                        <button class="btn btn-secondary btn-small" onclick="addToCart('Passionate Red', 'Contact for Price')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Creative Visions</h2>
+            <p>Discover unique, vibrant artworks by a talented young entrepreneur</p>
+            <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Darasimi Artworks</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Unique Creations</h3>
+                    <p>Each piece is handcrafted with passion and originality, telling a unique story</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Young Talent</h3>
+                    <p>Discover fresh perspectives and innovative techniques from an emerging artist</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Entrepreneurial Spirit</h3>
+                    <p>Direct from artist to collector, supporting independent creative businesses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="contact" class="newsletter-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Interested in purchasing or commissioning art? Let's create something beautiful together</p>
+            <form class="newsletter-form" onsubmit="handleContact(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-secondary">Contact Me</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Darasimi Artworks</h4>
+                    <p>Bringing color and creativity to your world</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Me</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Darasimi Artworks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="toggleCart()" class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be added here -->
+        </div>
+        <div class="cart-footer">
+            <button onclick="checkout()" class="btn btn-primary">Contact for Purchase</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+    <script>
+        let cart = [];
+
+        function toggleCart(event) {
+            if (event) event.preventDefault();
+            const sidebar = document.getElementById('cart-sidebar');
+            const overlay = document.getElementById('cart-overlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        function addToCart(title, price) {
+            const existingItem = cart.find(item => item.title === title);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ title, price, quantity: 1 });
+            }
+            updateCartDisplay();
+            updateCartCount();
+        }
+
+        function removeFromCart(title) {
+            cart = cart.filter(item => item.title !== title);
+            updateCartDisplay();
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').textContent = count;
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="https://via.placeholder.com/50x50/8e44ad/FFFFFF?text=${item.title.split(' ')[0]}" alt="${item.title}">
+                    <div class="cart-item-info">
+                        <h4>${item.title}</h4>
+                        <p>${item.price}</p>
+                    </div>
+                    <button onclick="removeFromCart('${item.title}')" class="remove-item">&times;</button>
+                `;
+                cartItems.appendChild(itemElement);
+            });
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            const items = cart.map(item => `${item.title} (${item.quantity})`).join(', ');
+            alert(`Thank you for your interest! Please contact us about: ${items}`);
+            cart = [];
+            updateCartDisplay();
+            updateCartCount();
+            toggleCart();
+        }
+
+        function handleContact(event) {
+            event.preventDefault();
+            alert('Thank you for your interest! I\'ll get back to you soon.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling for navigation links with offset for sticky navbar
+        document.querySelectorAll('.nav-link:not(.cart-icon)').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20; // 20px extra padding
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link:not(.cart-icon)');
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navbarHeight - 50;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
