@@ -25,7 +25,7 @@ html {
 body {
     font-family: var(--font-main);
     color: var(--text-color);
-    background-color: #fff;
+    background-color: var(--light-color);
     line-height: 1.6;
 }
 
@@ -39,7 +39,7 @@ body {
    NAVIGATION
    ================================ */
 .navbar {
-    background: var(--dark-color);
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--accent-color) 100%);
     color: white;
     padding: 1rem 0;
     position: sticky;
@@ -103,7 +103,10 @@ body {
    HERO SECTION
    ================================ */
 .hero {
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--accent-color) 100%);
+    background-image: url("../img/keith-haring.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 120px 20px;
     text-align: center;
