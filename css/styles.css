@@ -8,12 +8,12 @@
 }
 
 :root {
-    --primary-color: #1f5867;
-    --dark-color: #559CAD;
+    --primary-color: #591f67;
+    --dark-color: #6b55ad;
     --light-color: #ecf0f1;
     --accent-color: #deac5b8e;
-    --text-color: #2e869c;
-    --border-color: #89d8b8;
+    --text-color: #972e9c;
+    --border-color: #8a89d8;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.178);
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
